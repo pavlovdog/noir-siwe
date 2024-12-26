@@ -1,0 +1,19 @@
+{
+  "name": "noir-siwe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "biome check --fix --error-on-warnings .",
+    "format": "biome format --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "biome": "^0.3.3",
+    "ethers": "^6.13.4",
+    "siwe": "^2.3.2",
+    "viem": "^2.21.57"
+  }
+}

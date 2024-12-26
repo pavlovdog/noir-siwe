@@ -1,0 +1,9 @@
+[package]
+name = "siwe"
+type = "lib"
+authors = [""]
+compiler_version = ">=0.19.4"
+
+[dependencies]
+string_search = { tag = "main", git = "https://github.com/noir-lang/noir_string_search.git" }
+ecrecover = { tag = "v0.30.0", git = "https://github.com/colinnielsen/ecrecover-noir" }
