@@ -1,8 +1,8 @@
 [package]
 name = "siwe"
 type = "lib"
-authors = [""]
-compiler_version = ">=0.19.4"
+authors = ["Sergey Potekhin <hello@sergeypotekhin.com>"]
+compiler_version = ">=0.36.0"
 
 [dependencies]
 string_search = { tag = "main", git = "https://github.com/noir-lang/noir_string_search.git" }

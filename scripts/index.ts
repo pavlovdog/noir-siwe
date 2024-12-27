@@ -1,4 +1,4 @@
-import { createWalletClient, hashMessage, Hex, http, keccak256, recoverPublicKey, toPrefixedMessage } from 'viem'
+import { createWalletClient, hashMessage, Hex, http, recoverPublicKey } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 import { generatePrivateKey } from 'viem/accounts'
 import { SiweMessage } from 'siwe'
@@ -18,7 +18,6 @@ Chain ID: 1
 Nonce: 9ee17d6fb66302f77485feee3542b12d412581d284ce5b310f13939732398e89b01ea74f3e363b4815bc6f87cf187675
 Issued At: 2024-12-26T19:19:43.784Z`
 
-// const MESSAGE = 'Test 123'
 
 const prepareInputs = async (
     message: string,
@@ -56,6 +55,8 @@ const prepareInputs = async (
 async function main() {
     // Generate random private key and create account
     const account = privateKeyToAccount(PRIVATE_KEY)
+
+    console.log(account.address)
 
     // Create wallet client
     const client = createWalletClient({
@@ -108,6 +109,13 @@ async function main() {
     // const prefixU8 = Array.from(new TextEncoder().encode(prefix))
     // console.log('Ethereum Signed Message prefix as [u8]')
     // console.log(JSON.stringify(prefixU8))
+
+    // Log "Chain ID: " as [u8]
+    // const chainIdU8 = Array.from(new TextEncoder().encode('Chain ID: '))
+    // console.log('Chain ID: as [u8]')
+    // console.log(JSON.stringify(chainIdU8))
+
+    // const x = 'wants you to sign in with your Ethereum account:';
 }
 
 main().catch(console.error)
