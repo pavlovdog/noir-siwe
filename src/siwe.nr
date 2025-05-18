@@ -58,7 +58,7 @@ pub fn getDigest<let N: u32>(message: [u8; N]) -> [u8; 32] {
 pub struct SiweMessage<let N: u32> {
     message: [u8; N],
     pub chainId: u64,
-    pub address: Field
+    pub address: Field,
 }
 
 fn get_chainId<let N: u32>(MESSAGE: [u8; N]) -> u64 {
@@ -110,11 +110,14 @@ fn get_address<let N: u32>(MESSAGE: [u8; N]) -> Field {
 }
 
 fn hex_to_int(c: u8) -> u8 {
-    if (c >= 48) & (c <= 57) { // '0' to '9'
+    if (c >= 48) & (c <= 57) {
+        // '0' to '9'
         c - 48
-    } else if (c >= 65) & (c <= 70) { // 'A' to 'F'
+    } else if (c >= 65) & (c <= 70) {
+        // 'A' to 'F'
         c - 55
-    } else if (c >= 97) & (c <= 102) { // 'a' to 'f'
+    } else if (c >= 97) & (c <= 102) {
+        // 'a' to 'f'
         c - 87
     } else {
         0

@@ -20,11 +20,7 @@ pub fn to_uint_slice<let N: u32>(s: [u8; N], start: u64, end: u64) -> u64 {
     result
 }
 
-// fn to_uint<N>(s: [u8; N]) -> u64 {
-//     to_uint_slice(s, 0, N)
-// }
-
-pub fn digit_at<let N: u32>(s: [u8; N], index: u64) -> u8 {
+fn digit_at<let N: u32>(s: [u8; N], index: u64) -> u8 {
     let byte = s[index];
     assert((byte >= ZERO_INDEX) & (byte <= NINE_INDEX), "Character is not a digit");
     byte - ZERO_INDEX
