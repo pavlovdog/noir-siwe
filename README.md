@@ -1,7 +1,7 @@
 # Noir-SIWE
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Noir-Tests](https://github.com/pavlovdog/noir-siwe/actions/workflows/noir.yml/badge.svg)](https://github.com/pavlovdog/noir-siwe/actions/workflows/noir.yml)
+[![Noir-Tests](https://github.com/pavlovdog/noir-siwe/actions/workflows/noir.yaml/badge.svg)](https://github.com/pavlovdog/noir-siwe/actions/workflows/noir.yaml)
 
 ## Dev
 
